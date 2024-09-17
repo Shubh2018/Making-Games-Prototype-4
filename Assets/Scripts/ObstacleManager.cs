@@ -35,10 +35,10 @@ public class ObstacleManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.O))
-        {
-            ChangeObstacleSTate();
-        }
+        //if(Input.GetKeyDown(KeyCode.O))
+        //{
+        //    ChangeObstacleSTate();
+        //}
     }
 
     public void ChangeObstacleSTate()

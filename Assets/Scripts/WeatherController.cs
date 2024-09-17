@@ -6,35 +6,16 @@ using UnityEngine;
 public class WeatherController : MonoBehaviour
 {
 
-    enum Seasons
-    {
-        Summer,
-        Autumn,
-        Winter,
-        Spring
-    }
-
-    private Seasons currentSeason = Seasons.Summer;
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.O)) {
-            Seasons[] values = (Seasons[]) Enum.GetValues(typeof(Seasons));
-            int index = Array.FindIndex<Seasons>(values, (e) => e.ToString() == currentSeason.ToString());
-            List<Seasons> valuesList = new List<Seasons>(values);
+            WeatherStates[] values = (WeatherStates[]) Enum.GetValues(typeof(WeatherStates));
+            int index = Array.FindIndex(values, (e) => e == GameManager.Instance.Weather);
+            List<WeatherStates> valuesList = new List<WeatherStates>(values);
             valuesList.RemoveAt(index);
-            currentSeason = valuesList[UnityEngine.Random.Range(0, valuesList.Count)];
-            Debug.Log("Season is now: " + currentSeason);
+            GameManager.Instance.Weather = valuesList[UnityEngine.Random.Range(0, valuesList.Count)];
+            Debug.Log("Season is now: " + GameManager.Instance.Weather.ToString());
         }
-    }
-
-    public string GetCurrentSeason()
-    {
-        return currentSeason.ToString();
     }
 }

@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        Weather = WeatherStates.Spring;
         _obstacleManagers = FindObjectsOfType<ObstacleManager>();
 
         if(_obstacleManagers.Length > 0)
