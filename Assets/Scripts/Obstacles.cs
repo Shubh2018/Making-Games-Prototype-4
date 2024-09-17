@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class Obstacles : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private SpriteRenderer _onState;
+    [SerializeField] private SpriteRenderer _offState;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public SpriteRenderer OnState => _onState;
+    public SpriteRenderer OffState => _offState;    
 }
