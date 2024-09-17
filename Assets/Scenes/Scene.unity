@@ -2474,6 +2474,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1490954863}
     m_Modifications:
+    - target: {fileID: 164772766682703225, guid: 7f6653c02de9f4b459d309c486f601cb, type: 3}
+      propertyPath: ShapeModule.m_Rotation.z
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 2230058989883363602, guid: 7f6653c02de9f4b459d309c486f601cb, type: 3}
       propertyPath: carRb
       value: 
@@ -2525,6 +2529,26 @@ PrefabInstance:
     - target: {fileID: 6624063517731994158, guid: 7f6653c02de9f4b459d309c486f601cb, type: 3}
       propertyPath: m_Name
       value: Wind
+      objectReference: {fileID: 0}
+    - target: {fileID: 8942810353953342100, guid: 7f6653c02de9f4b459d309c486f601cb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8942810353953342100, guid: 7f6653c02de9f4b459d309c486f601cb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8942810353953342100, guid: 7f6653c02de9f4b459d309c486f601cb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8942810353953342100, guid: 7f6653c02de9f4b459d309c486f601cb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8942810353953342100, guid: 7f6653c02de9f4b459d309c486f601cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

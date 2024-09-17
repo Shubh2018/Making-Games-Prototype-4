@@ -6,6 +6,7 @@ using UnityEngine;
 public class WindController : MonoBehaviour
 {
     public Rigidbody2D carRb;
+    public ParticleSystem windEffect;
     
     public float windSpeed = 250f; // The speed of the wind force
     public float rotationSpeed = 50f; // Degrees per second
@@ -35,6 +36,9 @@ public class WindController : MonoBehaviour
         float radians = _currentAngle * Mathf.Deg2Rad;
         _windDirection = new Vector2(Mathf.Cos(radians), Mathf.Sin(radians));
 
+        // Rotate the particles
+        windEffect.transform.forward = _windDirection;
+        
         // Apply wind force to objects
         ApplyWindForce();
     }
@@ -67,7 +71,7 @@ public class WindController : MonoBehaviour
         Gizmos.DrawLine(transform.position, transform.position + windEndPoint);
         
         // Draw a line representing the car direction
-        Gizmos.color = Color.blue;
+        Gizmos.color = Color.cyan;
         Vector3 carEndPoint = new Vector3(carRb.transform.right.x, carRb.transform.right.y, 0) * 1;
         Gizmos.DrawLine(transform.position, transform.position + carEndPoint);
     }

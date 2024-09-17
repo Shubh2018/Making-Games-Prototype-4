@@ -39,6 +39,18 @@ public class GameManager : MonoBehaviour
             foreach(var obstacleManager in _obstacleManagers)
             {
                 obstacleManager.RandomizeObs();
+                obstacleManager.ChangeObstacleState((int)Weather);
+            }
+        }
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.O))
+        {
+            foreach(var obstacleManager in _obstacleManagers)
+            {
+                obstacleManager.ChangeObstacleState((int)Weather);
             }
         }
     }

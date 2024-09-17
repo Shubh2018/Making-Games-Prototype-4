@@ -33,33 +33,31 @@ public class ObstacleManager : MonoBehaviour
         }
     }
 
-    private void Update()
+/*    private void Update()
     {
-        //if(Input.GetKeyDown(KeyCode.O))
-        //{
-        //    ChangeObstacleSTate();
-        //}
-    }
+        if(Input.GetKeyDown(KeyCode.O))
+        {
+            ChangeObstacleState();
+        }
+    }*/
 
-    public void ChangeObstacleSTate()
+    public void ChangeObstacleState(int state)
     {
-        int randomNumber = Random.Range(0, 4);
-        WeatherStates state = (WeatherStates)randomNumber;
-        GameManager.Instance.Weather = state;
+        //int randomNumber = Random.Range(0, 4);
 
-        while(_obstacles[randomNumber].IsEnabled)
+/*        while(_obstacles[state].IsEnabled)
         {
             randomNumber = Random.Range(0, 4);
-        }
+        }*/
 
         foreach (var obstacle in _obstacles)
         {
             obstacle.TurnOff();
         }
 
-        _obstacles[randomNumber].TurnOn();
+        _obstacles[state].TurnOn();
 
-        Debug.Log($"Weather Changed!: {randomNumber}");
+        Debug.Log($"Weather Changed!: {state}");
     }
 }
 
@@ -76,7 +74,7 @@ public class Obs
     public void TurnOn()
     {
        _obstacle.OnState.gameObject.SetActive(true);
-        _obstacle.OffState.gameObject.SetActive(false);
+       _obstacle.OffState.gameObject.SetActive(false);
     }
 
     public void TurnOff()
