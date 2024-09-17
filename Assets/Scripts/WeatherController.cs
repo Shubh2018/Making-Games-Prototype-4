@@ -21,16 +21,14 @@ public class WeatherController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void ChangeWeather()
     {
-        if (Input.GetKeyDown(KeyCode.O)) {
-            Seasons[] values = (Seasons[]) Enum.GetValues(typeof(Seasons));
-            int index = Array.FindIndex<Seasons>(values, (e) => e.ToString() == currentSeason.ToString());
-            List<Seasons> valuesList = new List<Seasons>(values);
-            valuesList.RemoveAt(index);
-            currentSeason = valuesList[UnityEngine.Random.Range(0, valuesList.Count)];
-            Debug.Log("Season is now: " + currentSeason);
-        }
+        Seasons[] values = (Seasons[]) Enum.GetValues(typeof(Seasons));
+        int index = Array.FindIndex<Seasons>(values, (e) => e.ToString() == currentSeason.ToString());
+        List<Seasons> valuesList = new List<Seasons>(values);
+        valuesList.RemoveAt(index);
+        currentSeason = valuesList[UnityEngine.Random.Range(0, valuesList.Count)];
+        Debug.Log("Season is now: " + currentSeason);
     }
 
     public string GetCurrentSeason()

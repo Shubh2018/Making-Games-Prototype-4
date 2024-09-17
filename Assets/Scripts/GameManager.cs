@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public WeatherStates Weather { get; set; }
 
     private ObstacleManager[] _obstacleManagers;
+    private WeatherController _weatherController;
 
     private void Awake()
     {
@@ -32,6 +33,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         _obstacleManagers = FindObjectsOfType<ObstacleManager>();
+        _weatherController = FindObjectOfType<WeatherController>();
 
         if(_obstacleManagers.Length > 0)
         {
