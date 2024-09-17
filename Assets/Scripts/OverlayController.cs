@@ -7,8 +7,6 @@ using UnityEngine.UI;
 public class OverlayController : MonoBehaviour
 {
     [SerializeField]
-    WeatherController weatherController;
-    [SerializeField]
     GameObject panel;   
     Image img;
 
@@ -24,7 +22,8 @@ public class OverlayController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (weatherController.GetCurrentSeason())
+        WeatherStates season = GameManager.Instance.Weather;
+        switch (season.ToString())
         {
             case "Summer":
                 img.color = new Color32(0xF9, 0xD6, 0x2E, alpha);
