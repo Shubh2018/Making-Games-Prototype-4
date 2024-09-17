@@ -31,9 +31,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5363621398787796416}
+  - {fileID: 2673554522859841276}
   - {fileID: 6505853265743574132}
   - {fileID: 2884322290053414121}
-  - {fileID: 2673554522859841276}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5967927097519216751
@@ -51,12 +51,12 @@ MonoBehaviour:
   _obstacles:
   - _obstacle: {fileID: 2845754838333188258}
     _weatherState: 0
+  - _obstacle: {fileID: 5191261001293489054}
+    _weatherState: 1
   - _obstacle: {fileID: 3987973613422194966}
     _weatherState: 2
   - _obstacle: {fileID: 4978276506917878155}
     _weatherState: 3
-  - _obstacle: {fileID: 5191261001293489054}
-    _weatherState: 1
 --- !u!1001 &1059556921146524917
 PrefabInstance:
   m_ObjectHideFlags: 0
