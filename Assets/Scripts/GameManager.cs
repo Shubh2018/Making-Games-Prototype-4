@@ -12,6 +12,10 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance => instance;
 
+    public WeatherStates Weather { get; set; }
+
+    private ObstacleManager[] _obstacleManagers;
+
     private void Awake()
     {
         if (instance != this)
@@ -23,5 +27,18 @@ public class GameManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(this.gameObject);
+    }
+
+    private void Start()
+    {
+        _obstacleManagers = FindObjectsOfType<ObstacleManager>();
+
+        if(_obstacleManagers.Length > 0)
+        {
+            foreach(var obstacleManager in _obstacleManagers)
+            {
+                obstacleManager.RandomizeObs();
+            }
+        }
     }
 }
