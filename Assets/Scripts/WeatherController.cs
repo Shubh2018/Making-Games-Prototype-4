@@ -7,7 +7,7 @@ public class WeatherController : MonoBehaviour
 {
 
     // Update is called once per frame
-    void Update()
+    public void UpdateWeatherState()
     {
         if (Input.GetKeyDown(KeyCode.O)) {
             WeatherStates[] values = (WeatherStates[]) Enum.GetValues(typeof(WeatherStates));

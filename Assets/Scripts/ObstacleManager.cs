@@ -23,7 +23,7 @@ public class ObstacleManager : MonoBehaviour
 
         else
         {
-            if (randomizeObstacle < 85)
+            if (randomizeObstacle < 100)
             {
                 int random = Random.Range(0, 4);
 

@@ -50,6 +50,8 @@ public class GameManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.O))
         {
+            _weatherController.UpdateWeatherState();
+
             foreach(var obstacleManager in _obstacleManagers)
             {
                 obstacleManager.ChangeObstacleState((int)Weather);
