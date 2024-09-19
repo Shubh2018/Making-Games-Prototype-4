@@ -5,13 +5,14 @@ using UnityEngine;
 
 public class CarController : MonoBehaviour
 {
-    public WindController windController;
+    [HideInInspector] public WindController windController;
     public float lerpValue = 0.05f;
     
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        windController = FindObjectOfType<WindController>();
+        windController.CarRb = this.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame

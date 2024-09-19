@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class WindController : MonoBehaviour
 {
-    public Rigidbody2D carRb;
+    public Rigidbody2D CarRb { get; set; }
     public ParticleSystem windEffect;
     
     public float windSpeed = 250f; // The speed of the wind force
@@ -45,7 +45,7 @@ public class WindController : MonoBehaviour
 
     void ApplyWindForce()
     {
-        carRb.AddForce(_windDirection * (windSpeed * Time.deltaTime));
+        CarRb.AddForce(_windDirection * (windSpeed * Time.deltaTime));
     }
 
     private void ProcessInput()
@@ -59,7 +59,7 @@ public class WindController : MonoBehaviour
     }
     
     // This method draws the wind direction as a gizmo in the Scene view
-    private void OnDrawGizmos()
+/*    private void OnDrawGizmos()
     {
         // Draw a circle (as the center point) to visualize the wind origin
         Gizmos.color = Color.green;
@@ -72,7 +72,7 @@ public class WindController : MonoBehaviour
         
         // Draw a line representing the car direction
         Gizmos.color = Color.cyan;
-        Vector3 carEndPoint = new Vector3(carRb.transform.right.x, carRb.transform.right.y, 0) * 1;
+        Vector3 carEndPoint = new Vector3(CarRb.transform.right.x, CarRb.transform.right.y, 0) * 1;
         Gizmos.DrawLine(transform.position, transform.position + carEndPoint);
-    }
+    }*/
 }
