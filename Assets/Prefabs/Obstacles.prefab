@@ -231,6 +231,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: Winter
       objectReference: {fileID: 0}
+    - target: {fileID: 1488191247355596103, guid: 58be1f2c8eaa4704bb067fc739a631af, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d444a692cfda42444ba240c18e82c889, type: 3}
+    - target: {fileID: 1488191247355596103, guid: 58be1f2c8eaa4704bb067fc739a631af, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1488191247355596103, guid: 58be1f2c8eaa4704bb067fc739a631af, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1488191247355596103, guid: 58be1f2c8eaa4704bb067fc739a631af, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356328982748058083, guid: 58be1f2c8eaa4704bb067fc739a631af, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1fa2eb0d6bdb3b844a5ff898299f8785, type: 3}
+    - target: {fileID: 2356328982748058083, guid: 58be1f2c8eaa4704bb067fc739a631af, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356328982748058083, guid: 58be1f2c8eaa4704bb067fc739a631af, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356328982748058083, guid: 58be1f2c8eaa4704bb067fc739a631af, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3648165974355223511, guid: 58be1f2c8eaa4704bb067fc739a631af, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -278,6 +310,30 @@ PrefabInstance:
     - target: {fileID: 7549029781909551958, guid: 58be1f2c8eaa4704bb067fc739a631af, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8372347903007245554, guid: 58be1f2c8eaa4704bb067fc739a631af, type: 3}
+      propertyPath: m_Size.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8372347903007245554, guid: 58be1f2c8eaa4704bb067fc739a631af, type: 3}
+      propertyPath: m_Size.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8372347903007245554, guid: 58be1f2c8eaa4704bb067fc739a631af, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8372347903007245554, guid: 58be1f2c8eaa4704bb067fc739a631af, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8372347903007245554, guid: 58be1f2c8eaa4704bb067fc739a631af, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 7.688889
+      objectReference: {fileID: 0}
+    - target: {fileID: 8372347903007245554, guid: 58be1f2c8eaa4704bb067fc739a631af, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 7.7777777
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

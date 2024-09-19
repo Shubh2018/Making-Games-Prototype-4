@@ -57,10 +57,10 @@ public class ObstacleManager : MonoBehaviour
 
         foreach (var obstacle in _obstacles)
         {
-            obstacle.TurnOff();
+            obstacle.TurnOn();
         }
 
-        _obstacles[state].TurnOn();
+        _obstacles[state].TurnOff();
 
         Debug.Log($"Weather Changed!: {state}");
     }
