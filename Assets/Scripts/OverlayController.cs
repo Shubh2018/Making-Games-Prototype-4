@@ -6,7 +6,9 @@ using UnityEngine.UI;
 
 public class OverlayController : MonoBehaviour
 {
-    private SpriteRenderer overlay;
+    [SerializeField]
+    GameObject panel;   
+    Image img;
 
     [SerializeField]
     byte alpha = 0x80;
@@ -14,7 +16,7 @@ public class OverlayController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        overlay = GetComponent<SpriteRenderer>();
+        img = panel.GetComponent<Image>();
     }
 
     // Update is called once per frame
@@ -24,20 +26,20 @@ public class OverlayController : MonoBehaviour
         switch (season.ToString())
         {
             case "Summer":
-                overlay.color = new Color32(0xF9, 0xD6, 0x2E, alpha);
+                img.color = new Color32(0xF9, 0xD6, 0x2E, alpha);
                 break;
             case "Winter":
-                overlay.color = new Color32(0x00, 0xE4, 0xFF, alpha);
+                img.color = new Color32(0x00, 0xE4, 0xFF, alpha);
                 break;
             case "Spring":
-                overlay.color = new Color32(0x5E, 0x8D, 0x5A, alpha);
+                img.color = new Color32(0x5E, 0x8D, 0x5A, alpha);
                 break;
             case "Autumn":
-                overlay.color = new Color32(0xF4, 0x7B, 0x20, alpha);
+                img.color = new Color32(0xF4, 0x7B, 0x20, alpha);
                 break;
             default:
                 break;
         }
-        Debug.Log(overlay.color);
+        Debug.Log(img.color);
     }
 }
