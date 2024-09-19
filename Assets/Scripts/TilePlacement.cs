@@ -24,6 +24,7 @@ public class SpriteGridSpawner : MonoBehaviour
 
                 // Instantiate a new tile GameObject at the calculated position
                 GameObject newTile = Instantiate(spritePrefab, position, Quaternion.identity);
+                newTile.transform.parent = this.transform;
 
                 if (x == 0 && y == 0)
                 {
