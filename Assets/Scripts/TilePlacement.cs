@@ -7,7 +7,7 @@ public class SpriteGridSpawner : MonoBehaviour
     public float gridHeight;
     public float spacing; 
 
-    void Start()
+    void Awake()
     {
         SpawnGrid();
     }
