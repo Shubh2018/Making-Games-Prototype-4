@@ -15,9 +15,9 @@ public class SpriteGridSpawner : MonoBehaviour
     // Method to spawn the grid of tiles
     void SpawnGrid()
     {
-        for (int x = 0; x < gridWidth; x++)
+        for (int x = -(int)gridWidth/2; x <= gridWidth/2; x++)
         {
-            for (int y = 0; y < gridHeight; y++)
+            for (int y = -(int)gridHeight/2; y <= gridHeight/2; y++)
             {
                 
                 Vector3 position = new Vector3(x * spacing, y * spacing, 0);
