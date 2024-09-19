@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 6077408714691633342}
-  alpha: 128
+  alpha: 64
 --- !u!114 &4588041267154199807
 MonoBehaviour:
   m_ObjectHideFlags: 0

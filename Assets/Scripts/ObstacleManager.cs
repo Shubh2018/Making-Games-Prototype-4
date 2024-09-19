@@ -6,16 +6,16 @@ public class ObstacleManager : MonoBehaviour
 {
     [SerializeField] private Obs[] _obstacles;
 
-    private void Start()
+/*    private void Start()
     {
         this.transform.position = new Vector2(Random.Range(0, 10), Random.Range(0, 10));
-    }
+    }*/
 
     public void RandomizeObs()
     {
-        int randomizeObstacle = Random.Range(0, 101);
+        int randomizeObstacle = Random.Range(0, 100);
         
-        if(randomizeObstacle < 80)
+        if(randomizeObstacle < 40)
         {
             foreach(var obstacle in _obstacles)
                 obstacle.Obstacle.gameObject.SetActive(false);   

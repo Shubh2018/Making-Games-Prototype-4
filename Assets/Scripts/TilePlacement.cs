@@ -25,8 +25,16 @@ public class SpriteGridSpawner : MonoBehaviour
                 // Instantiate a new tile GameObject at the calculated position
                 GameObject newTile = Instantiate(spritePrefab, position, Quaternion.identity);
 
+                if (x == 0 && y == 0)
+                {
+                    ObstacleManager child = newTile.GetComponentInChildren<ObstacleManager>();
+
+                    if(child)
+                        child.gameObject.SetActive(false);
+                }
+
                 // Randomly select one child to activate and deactivate others
-                RandomlySelectChild(newTile);
+                //RandomlySelectChild(newTile);
             }
         }
     }
