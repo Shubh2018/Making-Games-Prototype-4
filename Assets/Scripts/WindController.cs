@@ -57,10 +57,12 @@ public class WindController : MonoBehaviour
     {
         return _windDirection;
     }
-    
+
     // This method draws the wind direction as a gizmo in the Scene view
-/*    private void OnDrawGizmos()
+    private void OnDrawGizmos()
     {
+        if (!CarRb) return;
+
         // Draw a circle (as the center point) to visualize the wind origin
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, 1);
@@ -69,10 +71,10 @@ public class WindController : MonoBehaviour
         Gizmos.color = Color.red;
         Vector3 windEndPoint = new Vector3(_windDirection.x, _windDirection.y, 0) * 1;
         Gizmos.DrawLine(transform.position, transform.position + windEndPoint);
-        
+
         // Draw a line representing the car direction
         Gizmos.color = Color.cyan;
         Vector3 carEndPoint = new Vector3(CarRb.transform.right.x, CarRb.transform.right.y, 0) * 1;
         Gizmos.DrawLine(transform.position, transform.position + carEndPoint);
-    }*/
+    }
 }
